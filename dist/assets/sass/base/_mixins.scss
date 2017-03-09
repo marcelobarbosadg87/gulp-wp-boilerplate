@@ -1,0 +1,173 @@
+/* MIXINS */ 
+
+@mixin flexbox() {
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+}
+
+@mixin inline-flexbox() {
+
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flexflex;
+  display: inline-flex;
+
+}
+
+/* SCALE */
+
+@mixin scale($size){
+
+  -moz-transform: scale($size);
+  -webkit-transform: scale($size);
+  -o-transform: scale($size);
+  -ms-transform: scale($size);
+  transform: scale($size);
+
+}
+
+/* TRANSITION */ 
+
+@mixin transition($args...) {
+
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+
+}
+
+
+/* SCALE */ 
+@mixin scale($args) {
+
+    -moz-transform: scale($args);
+    -webkit-transform: scale($args);
+    -o-transform: scale($args);
+    -ms-transform: scale($args);
+    transform: scale($args);
+
+}
+
+/* OPACITY - CROSSBROWSER */ 
+
+@mixin opacity($opacity) {
+
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+
+}
+
+
+/* GRADIENTS */ 
+
+@mixin gradient($start-color, $end-color, $orientation) {
+
+  background: $start-color;
+
+  @if $orientation == 'vertical' {
+
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+
+  } @else if $orientation == 'horizontal' {
+
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+
+  }
+
+   @else {
+
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+
+  }
+  
+}
+
+
+/* MIXINS - MEDIA QUERIES */ 
+
+
+@mixin tablet {
+
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop-sm - 1px}) {
+
+    @content;
+
+  }
+
+}
+
+@mixin tablet-portrait {
+
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop-sm - 1px}) and(orientation: portrait) {
+
+    @content;
+
+  }
+
+}
+
+
+
+@mixin desktop-sm {
+
+  @media (min-width: #{$desktop-sm}) {
+
+    @content;
+
+  }
+
+}
+
+@mixin desktop-md {
+
+  @media (min-width: #{$desktop-md}) {
+
+    @content;
+
+  }
+
+}
+
+@mixin notebook-hd {
+
+  @media (min-width: #{$notebook-hd}) {
+
+    @content;
+
+  }
+
+}
+
+
+@mixin desktop {
+
+  @media (min-width: #{$desktop-lg}) {
+
+    @content;
+
+  }
+  
+}
+
+
+@mixin desktop-lg {
+
+  @media (min-width: #{$desktop-lg}) {
+
+    @content;
+
+  }
+  
+}

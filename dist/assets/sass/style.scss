@@ -1,0 +1,121 @@
+$version: "1.0.0";
+
+/*
+Theme Name: --
+Theme URI: --
+Author: --
+Author URI: --
+Description: --
+Version: #{$version}
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: --
+Text Domain: --
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+
+
+/*
+
+style.scss
+
+-- /base/
+	-- normalize
+	-- variables
+	-- mixins
+	-- colors
+	-- fonts
+	-- animations
+
+
+-- /elements/
+	-- text
+	-- backgrounds
+	-- buttons
+	-- menus
+	-- slideshow
+	-- sections
+	-- cards
+	-- lists
+	-- forms
+
+
+
+-- /modules/
+	
+	-- index
+	-- 404
+	-- archive
+	-- author
+	-- category
+	-- tag
+	-- taxonomy
+	-- date
+	-- home
+	-- front-page
+	-- page
+	-- search
+	-- single
+	-- attachment
+	
+	-- header
+	-- footer
+	-- navigation
+	-- post
+	-- searchform
+	-- sidebar
+
+*/
+
+
+@import "base/normalize";
+@import "base/variables";
+@import "base/mixins";
+@import "base/colors";
+@import "base/fonts";
+@import "base/animations";
+
+
+@import "elements/text";
+@import "elements/backgrounds";
+@import "elements/buttons";
+@import "elements/menus";
+@import "elements/sections";
+@import "elements/cards";
+@import "elements/lists";
+@import "elements/forms";
+
+
+@import "modules/index";
+@import "modules/404";
+@import "modules/archive";
+@import "modules/author";
+@import "modules/category";
+@import "modules/tag";
+@import "modules/taxonomy";
+@import "modules/date";
+@import "modules/home";
+@import "modules/front-page";
+@import "modules/page";
+@import "modules/search";
+@import "modules/single";
+@import "modules/attachment";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/navigation";
+@import "modules/post";
+@import "modules/searchform";
+@import "modules/sidebar";
+
+
+
+
+
+
+
+
+
+
