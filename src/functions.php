@@ -227,7 +227,8 @@ function custom_scripts() {
 // Register and queue the Stlyes
 function custom_styles() {
 
-
+	wp_register_style( 'font-awesome', get_template_directory_uri().'/assets/lib/font-awesome-4.7.0/css/font-awesome.min.css' , false , '4.7.0', 'all' );
+	wp_enqueue_style( 'font-awesome' );
 
 	wp_register_style( 'ui-kit', get_template_directory_uri().'/assets/lib/uikit/css/uikit.min.css' , false , '1.0', 'all' );
 	wp_enqueue_style( 'ui-kit' );

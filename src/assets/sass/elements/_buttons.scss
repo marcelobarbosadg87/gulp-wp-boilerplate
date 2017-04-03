@@ -1,3 +1,64 @@
 .btn {
 
+	border: none;
+	padding: 1rem 2rem;
+	margin: 1rem;
+	border-radius: 5px;
+	color: $white;
+	font-family: $main-font;
+	
+	&-standard {
+
+		background: $blue;
+		@include box-shadow( 0, 2px, 0, 1px, darken($blue, 20%));
+
+		&:hover {
+
+			background: lighten($blue, 10%);
+
+		}
+	}
+
+	&-alert {
+
+		background: $orange;
+		@include box-shadow( 0, 2px, 0, 1px, darken($orange, 20%));
+
+		&:hover {
+
+			background: lighten($orange, 10%);
+			
+		}
+
+	}
+
+	&-success {
+
+		background: $green;
+		@include box-shadow( 0, 2px, 0, 1px, darken($green, 20%));
+
+		&:hover {
+
+			background: lighten($green, 10%);
+			
+		}
+
+	}
+
+	&-cancel {
+
+		background: $red;
+		@include box-shadow( 0, 2px, 0, 1px, darken($red, 20%));
+
+		&:hover {
+
+			background: lighten($red, 10%);
+			
+		}
+
+	}
+
+	i {
+		padding: 0 1rem 0 0;
+	}
 }

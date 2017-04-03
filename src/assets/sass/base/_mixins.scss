@@ -20,6 +20,16 @@
 
 }
 
+/* BOX SHADOW */
+
+
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color){
+
+  -webkit-box-shadow:  $horizontal $vertical $blur $spread $color;
+  box-shadow:  $horizontal $vertical $blur $spread $color;
+
+}
+
 /* SCALE */
 
 @mixin scale($size){
